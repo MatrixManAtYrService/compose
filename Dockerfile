@@ -24,6 +24,7 @@ RUN apk add --no-cache \
     musl-dev \
     openssl \
     openssl-dev \
+    openssh-client \
     zlib-dev
 ENV BUILD_BOOTLOADER=1
 
@@ -38,6 +39,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     libssl-dev \
     make \
     openssl \
+    openssh-client \
     zlib1g-dev
 
 FROM build-${BUILD_PLATFORM} AS build
